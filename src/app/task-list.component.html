@@ -1,0 +1,14 @@
+<div style="text-align:center">
+	<div>
+		<label>Todo:</label>
+        <input name="name-field" type="text" [(ngModel)]="name" required/>
+    	<button (click)="addTodo()">Add Todo</button>
+    </div>
+    <br>
+    <ul *ngFor="let task of tasks" style="list-style-position: inside;">
+        <li>
+            <span id="todo-name">{{task.name}}</span>
+            <button id="state" (click)="toggleCompletion(task)">{{task.completed}}</button>
+        </li>
+    </ul>
+</div>
